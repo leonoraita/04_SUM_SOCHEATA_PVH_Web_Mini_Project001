@@ -1,0 +1,17 @@
+{
+  "scripts": {
+    "watch": "yarn tailwindcss -i ./src/styles/input.css -o ./src/styles/output.css --watch"
+  },
+  "name": "Mini_Project",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.5.2",
+    "tailwindcss": "^4.0.6"
+  },
+  "dependencies": {
+    "@tailwindcss/cli": "^4.0.6"
+  }
+}

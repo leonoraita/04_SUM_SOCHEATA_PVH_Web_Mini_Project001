@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        function toggleSection(id) {
+            const section = document.getElementById(id);
+            section.classList.toggle("hidden");
+        }
+    </script>
+</head>
+<body class="bg-gray-100 text-black">
+    <!-- Navbar -->
+    <nav class="bg-white shadow-md border-b">
+        <div class="container mx-auto flex justify-between items-center py-4 px-20 gap-x-20">
+            <a href="#" class="text-xl font-bold">cyber</a>
+            <div class="flex-1 mx-6 hidden md:block text-center">
+                <input type="text" placeholder="Search..." class="w-80 px-4 py-2 border-0 rounded-md bg-gray-100">
+            </div>
+            <button class="md:hidden" onclick="toggleMenu()">
+                ☰
+            </button>
+            <ul class="hidden md:flex space-x-20 not-odd:">
+                <li><a href="#" class="hover:text-gray-600">Home</a></li>
+                <li><a href="#" class="hover:text-gray-600">About</a></li>
+                <li><a href="#" class="hover:text-gray-600">Contact Us</a></li>
+                <li><a href="#" class="hover:text-gray-600">Blog</a></li>
+            </ul>
+            <div class="flex space-x-4 gap-4">
+                <a href="#" class="hover:text-gray-600"><i class="fa-regular fa-heart"></i></a>
+                <a href="#" class="hover:text-gray-600"><i class="fa-solid fa-cart-shopping"></i></a>
+                <a href="#" class="hover:text-gray-600"><i class="fa-regular fa-user"></i></a>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-md p-4 text-center">
+            <input type="text" placeholder="Search..." class="w-48 px-4 py-2 border rounded-md mb-4 bg-gray-100">
+            <ul class="space-y-4">
+                <li><a href="#" class="block hover:text-gray-600">Home</a></li>
+                <li><a href="#" class="block hover:text-gray-600">About</a></li>
+                <li><a href="#" class="block hover:text-gray-600">Contact Us</a></li>
+                <li><a href="#" class="block hover:text-gray-600">Blog</a></li>
+            </ul>
+        </div>
+    </nav>
+    <nav class="bg-white py-4">
+        <div class="container mx-auto px-6">
+            <ul class="flex text-gray-400 text-sm">
+                <li>
+                    <a href="#" class="hover:text-gray-600">Home</a>
+                </li>
+                <li class="mx-2">></li>
+                <li>
+                    <a href="#" class="hover:text-gray-600">Catalog</a>
+                </li>
+                <li class="mx-2">></li>
+                <li class="text-black font-semibold">Smartphones</li>
+            </ul>
+        </div>
+    </nav>
+    <div class="flex min-h-screen">
+        <!-- Sidebar -->
+        <aside class="w-1/4 p-4 bg-white shadow-md">
+            <div class="relative mb-4">
+                <input type="text" placeholder="Search" class="w-full p-2 border border-gray-300 rounded-md" />
+            </div>
+            <h2 class="text-lg font-semibold">Brand</h2>
+            <div class="mt-2 space-y-2">
+                <label class="flex items-center gap-2"><input type="checkbox" /> Apple</label>
+                <label class="flex items-center gap-2"><input type="checkbox" /> Samsung</label>
+                <label class="flex items-center gap-2"><input type="checkbox" /> Oppo</label>
+            </div>
+
+            <!-- Collapsible Filters -->
+            <div class="mt-4">
+                <button onclick="toggleSection('battery')" class="w-full text-left font-semibold py-2 border-b">Battery capacity &#9662;</button>
+                <div id="battery" class="hidden pl-4 mt-2 space-y-2">
+                    <label class="flex items-center gap-2"><input type="checkbox" /> 3000mAh</label>
+                    <label class="flex items-center gap-2"><input type="checkbox" /> 4000mAh</label>
+                </div>
+
+                <button onclick="toggleSection('screen-type')" class="w-full text-left font-semibold py-2 border-b">Screen type &#9662;</button>
+                <div id="screen-type" class="hidden pl-4 mt-2 space-y-2">
+                    <label class="flex items-center gap-2"><input type="checkbox" /> LCD</label>
+                    <label class="flex items-center gap-2"><input type="checkbox" /> OLED</label>
+                </div>
+
+                <button onclick="toggleSection('screen-diagonal')" class="w-full text-left font-semibold py-2 border-b">Screen diagonal &#9662;</button>
+                <div id="screen-diagonal" class="hidden pl-4 mt-2 space-y-2">
+                    <label class="flex items-center gap-2"><input type="checkbox" /> 5.5 inch</label>
+                    <label class="flex items-center gap-2"><input type="checkbox" /> 6.1 inch</label>
+                </div>
+
+                <button onclick="toggleSection('protection-class')" class="w-full text-left font-semibold py-2 border-b">Protection class &#9662;</button>
+                <div id="protection-class" class="hidden pl-4 mt-2 space-y-2">
+                    <label class="flex items-center gap-2"><input type="checkbox" /> IP67</label>
+                    <label class="flex items-center gap-2"><input type="checkbox" /> IP68</label>
+                </div>
+
+                <button onclick="toggleSection('built-in-memory')" class="w-full text-left font-semibold py-2 border-b">Built-in memory &#9662;</button>
+                <div id="built-in-memory" class="hidden pl-4 mt-2 space-y-2">
+                    <label class="flex items-center gap-2"><input type="checkbox" /> 128GB</label>
+                    <label class="flex items-center gap-2"><input type="checkbox" /> 256GB</label>
+                </div>
+            </div>
+        </aside>
+
+
+        
+
+        <!-- Main Content --> 
+        <main class="flex-1 p-6 bg-white">
+            <div class="flex justify-between mb-4">
+                <h1 class="text-xl font-semibold">Selected Products: <span class="font-bold">9</span></h1>
+                <select class=" p-2 rounded-md">
+                    <option>By rating</option>
+                    <option>By price</option>
+                </select>
+            </div>
+
+            <!-- Products Grid -->
+            <div class="grid grid-cols-3 gap-6">
+                <div class="bg-gray-100 rounded-lg p-4 shadow-md h-96">
+                    <img src="img/Iphone 14 pro 1.png" alt="Apple iPhone 14 Pro 256GB Space Black" class=" m-auto h-40 object-cover mb-2 mt-6 rounded-lg" />
+                    <h3 class="text-lg font-medium text-center">Apple iPhone 14 Pro 256GB Space Black</h3>
+                    <p class="text-xl font-bold text-center">$1399</p>
+                    <button class="mt-7 ml-10 w-60 bg-black text-white py-2 rounded-md">Buy Now</button>
+                </div>
+                <div class="bg-gray-100 rounded-lg p-4 shadow-md">
+                    <img src="img/Iphone 14 pro 1 (1).png" alt="Apple iPhone 14 Pro 256GB Space Black" class=" m-auto h-40 object-cover mb-2 mt-6 rounded-lg" />
+                    <h3 class="text-lg font-medium text-center">Apple iPhone 14 Pro 256GB Space Black</h3>
+                    <p class="text-xl font-bold text-center">$1399</p>
+                    <button class="mt-7 ml-10 w-60 bg-black text-white py-2 rounded-md">Buy Now</button>
+                </div>
+                <div class="bg-gray-100 rounded-lg p-4 shadow-md">
+                    <img src="img/Iphone 14 pro 1 (1).png" alt="Apple iPhone 14 Pro 256GB Space Black" class=" m-auto h-40 object-cover mb-2 mt-6 rounded-lg" />
+                    <h3 class="text-lg font-medium text-center">Apple iPhone 14 Pro 256GB Space Black</h3>
+                    <p class="text-xl font-bold text-center">$1399</p>
+                    <button class="mt-7 ml-10 w-60 bg-black text-white py-2 rounded-md">Buy Now</button>
+                </div>
+                <div class="bg-gray-100 rounded-lg p-4 shadow-md h-96">
+                    <img src="img/Iphone 14 pro 1 (2).png" alt="Apple iPhone 14 Pro 256GB Space Black" class=" m-auto h-40 object-cover mb-2 mt-6 rounded-lg" />
+                    <h3 class="text-lg font-medium text-center">Apple iPhone 14 Pro 256GB Space Black</h3>
+                    <p class="text-xl font-bold text-center">$1399</p>
+                    <button class="mt-7 ml-10 w-60 bg-black text-white py-2 rounded-md">Buy Now</button>
+                </div>
+                <div class="bg-gray-100 rounded-lg p-4 shadow-md">
+                    <img src="img/Iphone 14 pro 1 (3).png" alt="Apple iPhone 14 Pro 256GB Space Black" class=" m-auto h-40 object-cover mb-2 mt-6 rounded-lg" />
+                    <h3 class="text-lg font-medium text-center">Apple iPhone 14 Pro 256GB Space Black</h3>
+                    <p class="text-xl font-bold text-center">$1399</p>
+                    <button class="mt-7 ml-10 w-60 bg-black text-white py-2 rounded-md">Buy Now</button>
+                </div>
+                <div class="bg-gray-100 rounded-lg p-4 shadow-md h-96">
+                    <img src="img/Iphone 14 pro 1 (4).png" alt="Apple iPhone 14 Pro 256GB Space Black" class=" m-auto h-40 object-cover mb-2 mt-6 rounded-lg" />
+                    <h3 class="text-lg font-medium text-center">Apple iPhone 14 Pro 256GB Space Black</h3>
+                    <p class="text-xl font-bold text-center">$1399</p>
+                    <button class="mt-7 ml-10 w-60 bg-black text-white py-2 rounded-md">Buy Now</button>
+                </div>
+                <div class="bg-gray-100 rounded-lg p-4 shadow-md">
+                    <img src="img/Iphone 14 pro 1 (5).png" alt="Apple iPhone 14 Pro 256GB Space Black" class=" m-auto h-40 object-cover mb-2 mt-6 rounded-lg" />
+                    <h3 class="text-lg font-medium text-center">Apple iPhone 14 Pro 256GB Space Black</h3>
+                    <p class="text-xl font-bold text-center">$1399</p>
+                    <button class="mt-7 ml-10 w-60 bg-black text-white py-2 rounded-md">Buy Now</button>
+                </div>
+                <div class="bg-gray-100 rounded-lg p-4 shadow-md">
+                    <img src="img/Iphone 14 pro 1 (6).png" alt="Apple iPhone 14 Pro 256GB Space Black" class=" m-auto h-40 object-cover mb-2 mt-6 rounded-lg" />
+                    <h3 class="text-lg font-medium text-center">Apple iPhone 14 Pro 256GB Space Black</h3>
+                    <p class="text-xl font-bold text-center">$1399</p>
+                    <button class="mt-7 ml-10 w-60 bg-black text-white py-2 rounded-md">Buy Now</button>
+                </div>
+                <div class="bg-gray-100 rounded-lg p-4 shadow-md">
+                    <img src="img/Iphone 14 pro 1 (7).png" alt="Apple iPhone 14 Pro 256GB Space Black" class=" m-auto h-40 object-cover mb-2 mt-6 rounded-lg" />
+                    <h3 class="text-lg font-medium text-center">Apple iPhone 14 Pro 256GB Space Black</h3>
+                    <p class="text-xl font-bold text-center">$1399</p>
+                    <button class="mt-7 ml-10 w-60 bg-black text-white py-2 rounded-md">Buy Now</button>
+                </div>
+            </div>
+            <div class="flex justify-center mt-6 space-x-2">
+                <button class="px-3 py-1 bg-gray-300 rounded-md">1</button>
+                <button class="px-3 py-1 bg-gray-300 rounded-md">2</button>
+                <button class="px-3 py-1 bg-gray-300 rounded-md">3</button>
+                <button class="px-3 py-1 bg-gray-300 rounded-md">...</button>
+                <button class="px-3 py-1 bg-gray-300 rounded-md">12</button>
+            </div>
+
+        </main>
+    </div>
+ <footer class="bg-black text-white py-12 px-12">
+        <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-4 justify-items-center">
+            <div>
+                <h3 class="text-xl font-bold">cyber</h3>
+                <p class="mt-2">We are a residential interior design firm located in Portland. Our boutique studio offers more than.</p>
+                <div class="flex space-x-4 mt-4">
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+            <div>
+                <h3 class="text-lg font-semibold">Services</h3>
+                <ul class="mt-2 space-y-2">
+                    <li>Bonus program</li>
+                    <li>Gift cards</li>
+                    <li>Credit and payment</li>
+                    <li>Service contracts</li>
+                    <li>Non-cash account</li>
+                    <li>Payment</li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-lg font-semibold">Assistance to the Buyer</h3>
+                <ul class="mt-2 space-y-2">
+                    <li>Find an order</li>
+                    <li>Terms of delivery</li>
+                    <li>Exchange and return of goods</li>
+                    <li>Guarantee</li>
+                    <li>Frequently asked questions</li>
+                    <li>Terms of use of the site</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    
+    
+</body>
+</html>
