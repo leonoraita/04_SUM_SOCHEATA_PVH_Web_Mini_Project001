@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <script src="https://cdn.tailwindcss.com"></script>
-    <title>Shipping</title>
+    <title>Payment</title>
 </head>
 <body">
 <nav class="bg-white border-b">
@@ -41,58 +41,92 @@
     </div>
 </nav>
     <div class="w-[80%] mx-auto bg-white p-14 rounded-lg  grid grid-row-2">
-
         <div class="flex justify-between items-center mb-16">
             <div class="flex space-x-6 text-gray-400">
                 <span><i class="fa-solid fa-location-dot"></i> Step 1</span>
             </div>
-            <div class=" text-black font-bold">
+            <div class="flex space-x-6 text-gray-400">
                 <span><i class="fa-solid fa-truck-fast"></i> Step 2 Shipping</span>
             </div>
-            <div class="flex space-x-6 text-gray-400 ">
-                <span class=""><i class="fa-solid fa-money-check"></i> Step 3 Payment</span>
+            <div class="flex items-center">
+                <span class="text-black font-bold"><i class="fa-solid fa-money-check"></i> Step 3 Payment</span>
             </div>
         </div>
-        <h2 class="text-lg font-semibold mb-4">Shipment Method</h2>
-        <div class="space-y-4">
-            <!-- Free Regular Shipment -->
-            <label class="flex items-center justify-between p-4 border rounded-lg cursor-pointer">
-                <div class="flex items-center space-x-3">
-                    <input type="radio" name="shipment" class="w-5 h-5 text-black accent-black" checked>
-                    <span class="font-medium">Free</span>
-                    <span class="text-gray-500">Regular shipment</span>
-                </div>
-                <span class="text-gray-600">17 Oct, 2023</span>
-            </label>
 
-            <!-- Express Shipment -->
-            <label class="flex items-center justify-between p-4 border rounded-lg cursor-pointer">
-                <div class="flex items-center space-x-3">
-                    <input type="radio" name="shipment" class="w-5 h-5 text-black accent-black">
-                    <span class="font-medium">$8.50</span>
-                    <span class="text-gray-500">Get your delivery as soon as possible</span>
+        <div class="grid grid-cols-2 space-x-11">
+            <div class="w-[100%] p-6 border">
+                <h2 class="text-lg font-semibold mb-4">Summary</h2>
+                <div class="space-y-6">
+                    <div class="flex items-center p-2 bg-gray-100 rounded-[10px] gap-3">
+                        <img src="img/Product Image.png" alt="" class="w-[50px]">
+                        <span>Apple iPhone 14 Pro Max 128GB</span>
+                        <span class="font-bold ml-[130px]">$1399</span>
+                    </div>
+                    <div class="flex items-center p-2 bg-gray-100 rounded-[10px] gap-3">
+                        <img src="img/image 56.png" alt="" class="w-[50px]">
+                        <span>AirPods Max Silver</span>
+                        <span class="font-bold ml-[240px]">$549</span>
+                    </div>
+                    <div class="flex items-center p-2 bg-gray-100 rounded-[10px] gap-3">
+                        <img src="img/image 56 (1).png" alt="" class="w-[50px]">
+                        <span>Apple Watch Series 9 GPS 41mm</span>
+                        <span class="font-bold ml-[130px]">$399</span>
+                    </div>
+                    <div>
+                        <p class="text-sm text-gray-600">Address:</p>
+                        <p class="font-semibold">1131 Dusty Townline, Jacksonville, TX 40322</p>
+                    </div>
+                    <div class="text-sm text-gray-600">Shipment method: <span class="font-semibold text-black">Free</span></div>
+                    <div class="flex justify-between font-semibold">
+                        <span>Subtotal</span>
+                        <span>$2347</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span>Estimated Tax</span>
+                        <span>$50</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span>Estimated shipping & Handling</span>
+                        <span>$29</span>
+                    </div>
+                    <div class="flex justify-between text-lg font-bold">
+                        <span>Total</span>
+                        <span>$2426</span>
+                    </div>
                 </div>
-                <span class="text-gray-400">1 Oct, 2023</span>
-            </label>
-
-            <!-- Scheduled Shipment -->
-            <label class="flex items-center justify-between p-4 border rounded-lg cursor-pointer">
-                <div class="flex items-center space-x-3">
-                    <input type="radio" name="shipment" class="w-5 h-5 text-black accent-black">
-                    <span class="font-medium">Schedule</span>
-                    <span class="text-gray-500">Pick a date when you want to get your delivery</span>
+            </div>
+            
+            <!-- Payment Section -->
+            <div class="w-[100%] p-4">
+                <h2 class="text-lg font-semibold mb-4">Payment</h2>
+                <div class="flex space-x-6">
+                    <button class=" text-black relative pb-1 after:block after:content-[''] after:w-full after:h-0.5 after:bg-black">
+                        Credit Card
+                    </button>
+                    <button class="text-gray-400">PayPal</button>
+                    <button class="text-gray-400">PayPal Credit</button>
                 </div>
-                <select class="text-gray-600 border rounded-lg px-2 py-1">
-                    <option>Select Date</option>
-                </select>
-            </label>
+                <div class="rounded-lg text-center mt-3.5">
+                    <img src="img/image 65.png" alt="">
+                </div>
+                <form class="mt-4 space-y-3">
+                    <input type="text" placeholder="Cardholder Name" class="w-full p-2 border rounded-lg">
+                    <input type="text" placeholder="Card Number" class="w-full p-2 border rounded-lg">
+                    <div class="flex space-x-4">
+                        <input type="text" placeholder="Exp. Date" class="w-1/2 p-2 border rounded-lg">
+                        <input type="text" placeholder="CVV" class="w-1/2 p-2 border rounded-lg">
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <input type="checkbox" id="same-address" class="w-4 h-4">
+                        <label for="same-address" class="text-sm">Same as billing address</label>
+                    </div>
+                </form>
+                <div class="flex justify-end mt-28 space-x-2">
+                    <button class="w-[50%] px-6 py-2 border border-gray-400 rounded-[5px]"><a href="step-2.html">Back</a></button>
+                    <button class="w-[50%] px-6 py-2 bg-black text-white rounded-[5px]">Next</button>
+            </div>
+            </div>
         </div>
-
-        <!-- Buttons -->
-        <div class="flex justify-end mt-36 space-x-2">
-            <button class="w-[20%] px-6 py-2 border border-gray-400 rounded-[5px]"><a href="step-1.html">Back</a></button>
-            <button class="w-[20%] px-6 py-2 bg-black text-white rounded-[5px]"><a href="step-3.html">Next</a></button>
-    </div>
     </div>
         <footer class="bg-black text-white py-12 px-12 mt-12">
             <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-4 justify-items-center">
